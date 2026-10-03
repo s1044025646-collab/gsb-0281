@@ -1,0 +1,12 @@
+{
+  "terminals": ["a", "b", "c"],
+  "nonTerminals": ["S", "A", "B", "C"],
+  "start": "S",
+  "productions": [
+    { "lhs": "S", "rhs": ["A", "B"] },
+    { "lhs": "S", "rhs": ["A", "C"] },
+    { "lhs": "A", "rhs": ["a"] },
+    { "lhs": "B", "rhs": ["b"] },
+    { "lhs": "C", "rhs": ["c"] }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "terminals": ["PLUS", "MUL", "LPAREN", "RPAREN", "ID"],
+  "nonTerminals": ["Expr", "ExprRest", "Term", "TermRest", "Factor"],
+  "start": "Expr",
+  "productions": [
+    { "lhs": "Expr", "rhs": ["Term", "ExprRest"] },
+    { "lhs": "ExprRest", "rhs": ["PLUS", "Term", "ExprRest"] },
+    { "lhs": "ExprRest", "rhs": [] },
+    { "lhs": "Term", "rhs": ["Factor", "TermRest"] },
+    { "lhs": "TermRest", "rhs": ["MUL", "Factor", "TermRest"] },
+    { "lhs": "TermRest", "rhs": [] },
+    { "lhs": "Factor", "rhs": ["LPAREN", "Expr", "RPAREN"] },
+    { "lhs": "Factor", "rhs": ["ID"] }
+  ]
+}
