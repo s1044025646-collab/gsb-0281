@@ -1,0 +1,15 @@
+{
+  "terminals": ["+", "*", "(", ")", "id"],
+  "nonterminals": ["E", "T", "F", "E'", "T'"],
+  "startSymbol": "E",
+  "productions": [
+    { "lhs": "E", "rhs": ["T", "E'"] },
+    { "lhs": "E'", "rhs": ["+", "T", "E'"] },
+    { "lhs": "E'", "rhs": [] },
+    { "lhs": "T", "rhs": ["F", "T'"] },
+    { "lhs": "T'", "rhs": ["*", "F", "T'"] },
+    { "lhs": "T'", "rhs": [] },
+    { "lhs": "F", "rhs": ["(", "E", ")"] },
+    { "lhs": "F", "rhs": ["id"] }
+  ]
+}

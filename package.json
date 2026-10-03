@@ -1,0 +1,23 @@
+{
+  "name": "cfg-ll1-analyzer",
+  "version": "1.0.0",
+  "description": "离线上下文无关文法 FIRST/FOLLOW 与 LL(1) 冲突诊断后端（API + CLI）",
+  "type": "commonjs",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "cfg": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "start": "node dist/cli/index.js serve",
+    "demo": "npm run build && node scripts/demo.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.9.0"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
